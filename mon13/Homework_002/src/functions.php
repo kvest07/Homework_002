@@ -3,21 +3,20 @@ function task1($arr, $i = true)
 {
     if ($i) {
         $elem = '<p>' . implode("</p><p>", $arr) . '</p>';
-        return $elem;
+        echo $elem;
     } else {
         $elem=implode(" ", $arr);
-        return $elem;
+        echo $elem;
     }
 }
 //===================================
 function task2($fst, ...$params)
 {
-
+    $s=$params[0];
     switch ($fst) {
         case "+":
             $elem=implode("+", $params);
             echo "$elem=";
-            $s=$params[0];
             unset($params[0]);
             foreach ($params as $elem) {
                 $s+=$elem;
@@ -27,7 +26,6 @@ function task2($fst, ...$params)
         case "-":
             $elem=implode("-", $params);
             echo "$elem=";
-            $s=$params[0];
             unset($params[0]);
             foreach ($params as $elem) {
                 $s-=$elem;
@@ -37,7 +35,6 @@ function task2($fst, ...$params)
         case "*":
             $elem=implode("*", $params);
             echo "$elem=";
-            $s=$params[0];
             unset($params[0]);
             foreach ($params as $elem) {
                 $s*=$elem;
@@ -47,7 +44,6 @@ function task2($fst, ...$params)
         case "/":
             $elem=implode("/", $params);
             echo "$elem=";
-            $s=$params[0];
             unset($params[0]);
             foreach ($params as $elem) {
                 $s/=$elem;
@@ -61,7 +57,7 @@ function task2($fst, ...$params)
 //================================================================
 function task3($cols, $rows)
 {
-    if (is_int($cols)and is_int($rows) and $cols>0 and $rows>0) {
+    if ($cols>0 and $rows>0) {
         $tr=1;
         echo "<table border='1'>" ;
 
