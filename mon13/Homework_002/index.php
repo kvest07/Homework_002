@@ -2,7 +2,7 @@
 require("src/functions.php");
 //====================
 $arr=['Привет','всем','от меня!'];
-task1($arr, false);
+echo task1($arr, true);
 echo "<br/>";
 //=====================
 task2("-", 8, 3, 2, 7);

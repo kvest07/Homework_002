@@ -6,7 +6,7 @@ function task1($arr, $i = true)
         echo $elem;
     } else {
         $elem=implode(" ", $arr);
-        echo $elem;
+        return $elem;
     }
 }
 //===================================
