@@ -42,13 +42,18 @@ function task2($fst, ...$params)
             echo $s;
             break;
         case "/":
-            $elem=implode("/", $params);
-            echo "$elem=";
-            unset($params[0]);
-            foreach ($params as $elem) {
-                $s/=$elem;
+        case "/":
+            if (in_array(0, $params, true)) {
+                echo"Ноль и на ноль делить нельзя, введите другие значения";
+            } else {
+                $elem=implode("/", $params);
+                echo "$elem=";
+                unset($params[0]);
+                foreach ($params as $elem) {
+                    $s/=$elem;
+                }
+                echo $s;
             }
-            echo $s;
             break;
         default:
             echo 'Введите первый параметр + или - или / или *'.'<br/>';
